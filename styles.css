@@ -22,8 +22,13 @@ body {
     line-height: 1.6;
 }
 .header {
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(
+        90deg,
+        rgba(227,25,55,0.05),
+        rgba(124,58,237,0.05),
+        rgba(30,58,138,0.05)
+    );
+    border-bottom: 1px solid var(--border-light);
 }
 .logo-container {
     text-align: center;
@@ -45,10 +50,8 @@ body {
     gap: 2rem;
     list-style: none;
 }
-.nav-links li a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
+.nav-links li a:hover {
+    color: var(--cgi-red);
 }
 .hero {
     min-height: 80vh;
@@ -91,8 +94,24 @@ body {
     max-width: 1100px;
     margin: auto;
 }
+.section h2 {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--cgi-red);
+    margin-top: 10px;
+}
 .section.dark {
-    background: var(--bg-dark);
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #020617
+    );
     color: var(--text-light);
 }
 .cards {
@@ -102,9 +121,10 @@ body {
     margin-top: 2rem;
 }
 .card {
-    padding: 1.5rem;
-    border-radius: 10px;
     background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--cgi-red);
 }
 .section.dark .card {
     background: #020617;
@@ -122,7 +142,3 @@ body {
     background: #020617;
     color: var(--text-light)
 }
-
-
-
-
