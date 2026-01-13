@@ -155,9 +155,42 @@ body {
 .skills li {
     margin-bottom: 0.5rem;
 }
+#skills .cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+#skills .card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+#skills .card h3 {
+  margin-top: 0;
+  color: #00aaff;
+  font-size: 1.2rem;
+}
+#skills .card ul {
+  padding-left: 20px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+#skills .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  background-color: #272727;
+}
 .footer {
     text-align: center;
     padding: 1.5rem;
     background: #020617;
     color: var(--text-light)
 }
+
