@@ -1,9 +1,14 @@
 :root {
+    --bg-light: #ffffff;
     --bg-dark: #0f172a;
-    --bg-light: #f8fafc;
-    --text-dark: #0f172a;
-    --text-light: #e5e7eb;
-    --accent: #2563eb;
+    --text-dark: #111827;
+    --text-light: #f9fafb;
+    --cgi-red: #E31937;
+    --cgi-purple: #7C3AED;
+    --cgi-blue: #1E3A8A;
+    --accent: #E31937;
+    --accent-hover: #b2152d;
+    --border-light: #e5e7eb;
 }
 * {
     margin: 0;
@@ -53,7 +58,12 @@ body {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, #0f172a, #020617);
+    background: linear-gradient(
+        135deg,
+        var(--cgi-red),
+        var(--cgi-purple),
+        var(--cgi-blue)
+    );
     color: var(--text-light);
 }
 .hero h1 {
@@ -64,11 +74,17 @@ body {
     max-width: 600px;
 }
 .btn {
-    background: var(--accent);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
+    background: white;
+    color: var(--cgi-blue);
+    padding: 0.75rem 2rem;
+    border-radius: 999px;
     text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .section {
     padding: 4rem 2rem;
@@ -106,6 +122,7 @@ body {
     background: #020617;
     color: var(--text-light)
 }
+
 
 
 
